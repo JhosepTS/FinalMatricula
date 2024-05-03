@@ -267,17 +267,32 @@ public void cargarDatosDesdeArchivo() {
         TBMatriculi.setModel(modelo);
     }
     private void btnInsertarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInsertarActionPerformed
-        try{
-            Matriculas x=new Matriculas();
-            x.setApellido(txtApellidos.getText());
-            x.setDni(txtDni.getText());
-            x.setFechaNacimiento(txtFecha.getText());
-            x.setCorreo(txtCorreo.getText());
-            listamatriculas.add(x);
-            refrescarTabla();
-             guardarDatosEnArchivo(x);
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(this,"ERROR AL INGRESAR NOTAS");
+                try{
+          // Obtener los datos del formulario
+        String apellidos = txtApellidos.getText();
+        String dni = txtDni.getText();
+        String fechaNacimiento = txtFecha.getText();
+        String correo = txtCorreo.getText();
+
+        // Validar el formato del correo electrónico
+        if (!correo.endsWith("@gmail.com")) {
+            JOptionPane.showMessageDialog(this, "El correo electrónico debe terminar con '@gmail.com'", "Error", JOptionPane.ERROR_MESSAGE);
+            return; // Salir del método si el formato del correo es incorrecto
+        }
+
+        // Crear una nueva instancia de Matriculas y agregarla a la lista
+        Matriculas x = new Matriculas();
+        x.setApellido(apellidos);
+        x.setDni(dni);
+        x.setFechaNacimiento(fechaNacimiento);
+        x.setCorreo(correo);
+        listamatriculas.add(x);
+
+        // Actualizar la tabla y guardar los datos en el archivo
+        refrescarTabla();
+        guardarDatosEnArchivo(x);
+    } catch (Exception e) {
+        JOptionPane.showMessageDialog(this, "Error al ingresar la matrícula", "Error", JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_btnInsertarActionPerformed
 
