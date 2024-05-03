@@ -1,0 +1,20 @@
+Apellidos y Nombres:  Taipe Sotacuro Jhosep Cristhian
+DNI:  4866126
+Curso:  Matematicas
+Nota: 20
+--------------------------------------------------------------------------
+Apellidos y Nombres:  Torres Pascal Juan
+DNI:  7854123
+Curso:  Comunicacion
+Nota: 20
+--------------------------------------------------------------------------
+Apellidos y Nombres:  Taipe Sotacuro Jhosep
+DNI: 78455112
+Curso:  Comunicacion
+Nota: 20
+--------------------------------------------------------------------------
+Apellidos y Nombres: Tapia Julian Jhan
+DNI:  7854123
+Curso:  Educacion Fisica
+Nota: 15
+--------------------------------------------------------------------------
